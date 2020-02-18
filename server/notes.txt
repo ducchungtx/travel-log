@@ -1,0 +1,13 @@
+1. Cấu hình eslint nhanh:
+npx eslint --init
+? How would you like to use ESLint? To check syntax, find problems, and enforce code style
+? What type of modules does your project use? CommonJS (require/exports)
+? Which framework does your project use? None of these
+? Does your project use TypeScript? No
+? Where does your code run? Browser, Node
+? How would you like to define a style for your project? Use a popular style guide
+? Which style guide do you want to follow? Airbnb: https://github.com/airbnb/javascript
+? What format do you want your config file to be in? JavaScript
+
+
+// https://youtu.be/5pQsl9u_10M?list=WL&t=2009
