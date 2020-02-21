@@ -10,4 +10,4 @@ npx eslint --init
 ? What format do you want your config file to be in? JavaScript
 
 
-// https://youtu.be/5pQsl9u_10M?list=WL&t=3567
+// https://youtu.be/5pQsl9u_10M?list=WL&t=7019
