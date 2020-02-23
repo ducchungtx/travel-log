@@ -10,4 +10,59 @@ npx eslint --init
 ? What format do you want your config file to be in? JavaScript
 
 
+now secrets add trave-log-db mongodb+srv://user:password@cluster0-0rown.mongodb.net/test?retryWrites=true
+npm install -g now-config -> neu chua co
+npx now-config
+
+? What is the name of the project? 🤔 (server)  travel-log
+? What is the name of the project? 🤔 travel-log
+? What type of project? 📦 (Use arrow keys)
+? What type of project? 📦 node-express
+? What is the path to your express entry point? 🌈 (src/index.js)
+? What is the path to your express entry point? 🌈 src/index.js
+? Would you like to specify an alias? 🤖 (Y/n)  y
+? Would you like to specify an alias? 🤖 Yes
+? What is the alias? 👤
+? What is the alias? 👤
+(Specify multiple separated by commas.) travel-log
+All done! 🎉 Type now to deploy! 🚀
+
+// Deploy server
+now secrets add trave-log-api-key mykeysecrets
+// add in now.json this content
+"env": {
+    "NODE_ENV": "production",
+    "PORT": 1337,
+    "DATABASE_URL": "@trave-log-db",
+    "CORS_ORIGIN": "",
+    "API_KEY": "@trave-log-api-key"
+  }
+
+//to remove secrets key
+now secrets remove your-name
+
+// Deploy client
+change folder to client and
+yarn build
+cd public
+npx now-config
+? What is the name of the project? 🤔 travel-log
+? What type of project? 📦 static
+? What folder would you like to deploy? 🔎 .
+? Would you like to specify an alias? 🤖 Yes
+? What is the alias? 👤
+(Specify multiple separated by commas.) travel-log
+
+Edit now.jon to
+{
+  "version": 2,
+  "alias": [
+    "travel-log"
+  ]
+}
+then copy this file to build folder
+
+cd to build folder and
+command now
+
 // https://youtu.be/pgEhYmJoS2o?t=224

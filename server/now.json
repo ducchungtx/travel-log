@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "name": "travel-log",
+  "builds": [
+    {
+      "src": "src/index.js",
+      "use": "@now/node-server"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/.*",
+      "dest": "src/index.js"
+    }
+  ],
+  "alias": [
+    "travel-log-chung"
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "PORT": "1337",
+    "DATABASE_URL": "@trave-log-db",
+    "CORS_ORIGIN": "https://travel-log.zrmedia.now.sh",
+    "API_KEY": "@trave-log-api-key"
+  }
+}
